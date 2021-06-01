@@ -16,6 +16,11 @@ function Banner() {
             setMovie(response.data.results[randomNum])
         })
     }, [])
+
+    function truncate(str, n){
+        return str?.length > n ? str.substr(0, n-1) + "..." : str;
+    }
+
     return (
         <div
         style={{backgroundImage:`url(${movie ? imageUrl+movie.backdrop_path:''})`}}
@@ -26,7 +31,7 @@ function Banner() {
                     <button className="button">Play</button>
                     <button className="button">My List</button>
                 </div>
-                <h1 className="description">{movie ? movie.overview:''}</h1>
+                <h1 className="description">{truncate(movie?.overview,200)}</h1>
             </div>
             <div className="fade_bottom"></div>
         </div>

@@ -42,11 +42,6 @@ button:hover {
   font-size: 1rem;
   height: 80px;
   max-width: 360px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 8; /* number of lines to show */
-  -webkit-box-orient: vertical;
 }
 .fade_bottom {
   height: 7.4rem;
