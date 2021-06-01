@@ -1,5 +1,5 @@
 import NavBar from "./Components/NavBar/NavBar";
-import {action,originals,comedy,horror,romance,documentary} from './urls'
+import {action,trending,originals,comedy,horror,romance,documentary} from './urls'
 import './App.css';
 import Banner from "./Components/Banner/Banner";
 import RowPost from "./Components/RowPost/RowPost";
@@ -11,6 +11,7 @@ function App() {
       <NavBar />
       <Banner />
       <RowPost url={originals} title='Netflix Originals' />
+      <RowPost url={trending} title='Trending Now' isSmall />
       <RowPost url={action} title='Action' isSmall />
       <RowPost url={comedy} title='Comedy' isSmall />
       <RowPost url={horror} title='Horror' isSmall />
